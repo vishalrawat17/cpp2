@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int larg_element(int array[],int size){
+    int larger=INT16_MIN;
+    int largerIndex=-1;
+    for(int i=0;i<size;i++){
+        if(array[i]>larger){
+            larger=array[i];
+            largerIndex=i;
+        }
+    }
+    return largerIndex;
+}
+int main(){
+    int array[]={12,53,27,17};
+    int size=sizeof(array)/sizeof(array[0]);
+    int largest_element=larg_element(array,size);
+    array[largest_element]=-1;
+    int sec_largest_element=larg_element(array,size);
+    cout<<array[sec_largest_element];
+    return 0;
+}
