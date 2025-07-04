@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int array[]{1,3,5,8,9,2};
+    int size=sizeof(array)/sizeof(array[0]);
+    int ans=10;
+    int first=array[0];
+    for(int i=0;i<size;i++){
+        if(array[0]+array[i]==ans){
+            cout<<array[0]<<" "<<array[i]<<endl;
+            break;
+        }
+    }
+    return 0;
+}
